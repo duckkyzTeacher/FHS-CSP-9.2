@@ -1,15 +1,71 @@
-#DEMO:
+def greet(name, adjective, punctuation):
+    print(f"Hello, {name}{punctuation} You are {adjective}{punctuation}")
+
+greet("Alice", "rad", "!")
+greet("rad", "!", "Alice")
+greet("!", "Alice", "rad")
+
+print("\n\n\n")
+
+def getInfo(name, phoneNum = "N/A"):
+    print(f"{name}\'s number is {phoneNum}")
+    
+getInfo("Cherry")
+getInfo("Steve", "867-5309")
+getInfo(phoneNum="555-5555", name = "Yvette")
+
+print("\n\n\n")
+
+def sum_all(*args):
+	result = 0
+	for num in args:
+		result += num
+	return result
+
+print(sum_all(1, 2, 3, 4, 5))
+
+print("\n\n\n")
 
 
-printExampleHeader(1)
-#Write a function that prints out the header for each example
+def display_info(**kwargs):
+	for key, value in kwargs.items():
+		print(f"{key}: {value}")
+
+display_info(name="Alice", age=30, city="New York")
 
 
-printExampleHeader(2)
-#Write a function that returns the square of a number
+print("\n\n\n")
+
+def print_args_and_kwargs(*args, **kwargs):
+	print("Positional arguments:")
+	for arg in args:
+		print(arg)
+	
+	print("Keyword arguments:")
+	for key, value in kwargs.items():
+		print(f"{key}: {value}")
+
+print_args_and_kwargs(1, 2, 3, name="Alice", age=30)
 
 
-printExampleHeader(3)
-#Create a global variable
-#Write a function that does something dumb but reuse that variable name inside the function and make sure it has a different value and return that value
-#Print both to show that they are different
+print("\n\n\n")
+
+def print_coordinates(x, y, z, w):
+	print(f"X: {x}, Y: {y}, Z: {z}, W: {w}")
+
+coordinates = [1, 2, 3, 4]
+
+print_coordinates(*coordinates)
+
+
+
+print("\n\n\n")
+
+def print_values(a, b, c, d):
+	print(a, b, c, d)
+
+arguments = {'b': 10, 'a': 20, 'c': 30, 'd': 40}
+
+print_values(**arguments)
+
+
